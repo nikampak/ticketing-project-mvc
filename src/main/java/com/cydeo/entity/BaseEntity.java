@@ -5,12 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class BaseEntity {
-
     private Long id;
     private LocalDateTime insertDateTime;
     private Long insertUserId;
