@@ -1,7 +1,5 @@
 package com.cydeo.service.impl;
 
-import com.cydeo.dto.RoleDTO;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,7 +8,6 @@ import java.util.Map;
 public abstract class AbstractMapService<T, ID> {
 
     protected Map<ID, T> map = new HashMap<>();
-
     T save(ID id, T object){
         map.put(id, object);
         return object;
@@ -25,5 +22,9 @@ public abstract class AbstractMapService<T, ID> {
 
     void deleteById(ID id) {
         map.remove(id);
+    }
+
+    void update(ID id, T object){
+        map.put(id, object);
     }
 }
